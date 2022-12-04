@@ -51,19 +51,19 @@ automate tasks with python<br>
 unblock blocked websites<br>
 </h3>
   <script type="text/javascript" src="mobile.js"></script>
-  <script>
-function ani() {
-    document.cookie="page=visited";
+<script>
+  function ani() {
+    document.cookie = "page=visited";
     document.getElementById('tedt').innerHTML = "welcome"
-    setTimeout(() => {window.location.replace("test.html");}, 10);
+    setTimeout(() => {window.location.replace("test.html");}, 300);
 
   }
-function testvis(){
-  let username = getCookie("page");
-  if (username="visited") {
-  setTimeout(() => {window.location.replace("test.html");}, 10);
+  function testvis(){
+    let user = document.cookie("page");
+    if (user="visited") {
+    alert("Welcome again")
+    }
   }
 
 </script>
-
 </body>
