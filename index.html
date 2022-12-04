@@ -59,6 +59,8 @@ unblock blocked websites<br>
 
   }
   function testvis(){
+    let user = document.cookie("page");
+    if (user="visited") 
     window.location.replace("test.html");
   }
 
