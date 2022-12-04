@@ -53,15 +53,13 @@ unblock blocked websites<br>
   <script type="text/javascript" src="mobile.js"></script>
   <script>
   function ani() {
+    document.cookie="page=visited";
     document.getElementById('tedt').innerHTML = "welcome"
     setTimeout(() => {window.location.replace("test.html");}, 300);
-    document.cookie = "page=visited";
 
   }
   function testvis(){
-    let user = document.cookie("page");
-    if (user="visited") 
-    alert("Welcome again")
+    alert(document.cookie);
   }
 
 </script>
