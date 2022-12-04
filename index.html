@@ -55,14 +55,13 @@ unblock blocked websites<br>
 function ani() {
     document.cookie="page=visited";
     document.getElementById('tedt').innerHTML = "welcome"
-    setTimeout(() => {window.location.replace("test.html");}, 1000000);
+    setTimeout(() => {window.location.replace("test.html");}, 10);
 
   }
 function testvis(){
-    let user = document.cookie("page");
-    if (user="visited") {
-    alert("Welcome again")
-    }
+  let username = getCookie("page");
+  if (username="visited") {
+  setTimeout(() => {window.location.replace("test.html");}, 10);
   }
 
 </script>
