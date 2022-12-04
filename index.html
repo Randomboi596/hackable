@@ -40,7 +40,7 @@
   <br>
   <br>
   <br>
-  <p><a class="testd" href="#" onclick="ani" id="tedt">begin</a></p>
+  <p><a class="testd" href="#" onclick="ani()" id="tedt">begin</a></p>
   <br>
   <br>
   <br>
@@ -52,13 +52,13 @@ unblock blocked websites<br>
 </h3>
   <script type="text/javascript" src="mobile.js"></script>
   <script>
-  function ani {
+function ani() {
     document.cookie="page=visited";
     document.getElementById('tedt').innerHTML = "welcome"
-    setTimeout(() => {window.location.replace("test.html");}, 300);
+    setTimeout(() => {window.location.replace("test.html");}, 1000000);
 
   }
-  function testvis(){
+function testvis(){
     let user = document.cookie("page");
     if (user="visited") {
     alert("Welcome again")
