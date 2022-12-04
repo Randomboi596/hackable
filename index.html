@@ -1,26 +1,69 @@
-<html>  
-<head>  
-</head>  
-<body>  
-<input type="button" value="setCookie" onclick="setCookie()">  
-<input type="button" value="getCookie" onclick="getCookie()">  
-    <script>  
-    function setCookie()  
-    {  
-        document.cookie="username=Duke Martin";  
-    }  
-    function getCookie()  
-    {  
-        if(document.cookie.length!=0)  
-        {  
-        alert(document.cookie);  
-        }  
-        else  
-        {  
-        alert("Cookie not available");  
-        }  
-    }  
-    </script> 
-    
-    </body>
-  
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Hackable |  Hack Anything</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+</head>
+<body onload="testvis()">
+  <header>
+      <a class="logo" href="/"><img src="hackable.svg" alt="logo"></a>
+      <nav>
+          <ul class="nav__links">
+              <li><a href="#">Tutorials</a></li>
+              <li><a href="#">About</a></li>
+          </ul>
+      </nav>
+      <a class="cta" href="#">Contact</a>
+      <p class="menu cta">Menu</p>
+  </header>
+  <div class="overlay">
+      <a class="close">&times;</a>
+      <div class="overlay__content">
+          <a href="#">Tutorials</a>
+          <a href="#">About</a>
+      </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p><a class="testd" href="#" onclick="ani()" id="tedt">begin</a></p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h3 class="gh">
+Bypass school computer systems<br>
+automate tasks with python<br>
+unblock blocked websites<br>
+</h3>
+  <script type="text/javascript" src="mobile.js"></script>
+  <script>
+  function ani() {
+    document.getElementById('tedt').innerHTML = "welcome"
+    setTimeout(() => {window.location.replace("test.html");}, 300);
+    document.cookie = "page=visited";
+
+  }
+  function testvis(){
+    let user = document.cookie("page");
+    if (user="visited") 
+    alert("Welcome again")
+  }
+
+</script>
+
+</body>
