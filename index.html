@@ -59,6 +59,8 @@ unblock blocked websites<br>
 
   }
   function testvis(){
+    const regex = new RegExp('${page}=(.*?)(;|$)');
+    return regex.exec(document.cookie)?.[1];
     let user = document.cookie("page");
     if (user="visited") {
     alert("Welcome again")
