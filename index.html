@@ -59,10 +59,8 @@ unblock blocked websites<br>
 
   }
   function testvis(){
-    const regex = new RegExp('${page}=(.*?)(;|$)');
-    return regex.exec(document.cookie)?.[1];
-    console.log(document.cookie(page))
-}
+console.log(document.cookie('page'))
+  }
 
 </script>
 </body>
