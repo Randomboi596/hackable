@@ -53,14 +53,32 @@ unblock blocked websites<br>
   <script type="text/javascript" src="mobile.js"></script>
 <script>
   function ani() {
-    document.cookie = "page=visited";
     document.getElementById('tedt').innerHTML = "welcome"
     setTimeout(() => {window.location.replace("test.html");}, 300);
+    document.cookie = "page=visited";
 
   }
-  function testvis(){
-console.log(document.cookie('page'))
+  function getCookie() {
+  let name = page + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
   }
+  return "";
+}
 
+function testvis() {
+  let user = getCookie("page");
+  if (user="") {
+    alert("Welcome again " + user);
+  }
+}
 </script>
 </body>
